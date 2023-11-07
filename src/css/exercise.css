@@ -1,0 +1,222 @@
+.exercise {
+    padding: 0 1rem;
+    width: 100%;
+    margin-top: 3rem;
+    max-height: calc(100% - 3rem - 5rem);
+    display: grid;
+    grid-template-rows: 2rem 4rem auto 2rem;
+    gap: 1rem;
+    padding-bottom: 4rem;
+}
+
+.exercise > .locator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: left;
+}
+
+.exercise > .options {
+    border: 1px solid gray;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    overflow: scroll;
+    margin-bottom: 1rem;
+}
+
+.exercise > .options > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exercise > .options > div > button {
+    padding: 5px;
+    width: 40px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exercise > .options > div > button > svg {
+    width: fit-content;
+}
+
+.exercise > .options .popup {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 15px 15px #00000020;
+    display: flex;
+    top: calc(3rem + 1rem + 3rem + 3rem + 5px);
+    left: 2.5rem;
+    right: 2.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: min(calc(100% - 5rem), auto);
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.exercise > .options .popup .btns {
+    display: grid;
+    grid-template-columns: 8rem 8rem;
+    gap: 0.5rem;
+}
+
+.exercise > .options .popup .btns > button {
+    padding: 5px;
+}
+
+.exercise > .options .popup .btns > button.active {
+    border: 2px solid var(--border-color);
+}
+
+.exercise > .options .popup > button {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 75%;
+}
+
+.exercise .questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.exercise .questions .question {
+    min-width: calc(100vw - 2rem);
+    max-width: calc(100vw - 2rem);
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 15px 15px #00000010;
+
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    grid-template-rows: 3fr 3fr 1fr;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.question > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.question .display {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.question .display h2 {
+    width: 100%;
+    text-align: center;
+
+    font-size: 200%;
+}
+
+.exercise .question .input,
+.exercise .question .correct {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 1rem;
+    border: 1px solid #80808000;
+    border-radius: 1rem;
+}
+
+.question .input input,
+.question .correct .ababbaababhfdkjghlkjdf {
+    font-size: larger;
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.question .correct .ababbaababhfdkjghlkjdf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: 200%;
+    border-radius: 1rem;
+    gap: 2px;
+}
+
+.question .input input {
+    background-color: transparent;
+    color: black;
+    border-radius: 1rem;
+    border: 1px solid gray;
+}
+
+.exercise .question .input.h,
+.exercise .question .correct.h {
+    display: none;
+}
+
+.question .correct span {
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+}
+
+.question .correct span.green {
+    background-color: green;
+}
+.question .correct span.yellow {
+    background-color: yellow;
+    color: black;
+}
+.question .correct span.red {
+    background-color: red;
+}
+
+.exercise .questions .question .ctrls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.question .ctrls button {
+    border: 1px solid #512ba9;
+}
+
+.exercise .question .idx {
+    display: flex;
+    gap: 5px;
+    font-weight: 600;
+    align-self: flex-end;
+}
+
+.exercise .ministats {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.exercise .ministats p {
+    text-align: left;
+    list-style-type: circle;
+    display: list-item;
+}

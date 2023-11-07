@@ -1,0 +1,126 @@
+.settings {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+
+    padding: 1rem;
+    height: 100%;
+}
+
+.settings > div.selection {
+    border-radius: 0.75rem 0.75rem 0 0;
+    background-color: white;
+    background: linear-gradient(0deg, #ffffffff 10%, #ffffffda 100%);
+    height: fit-content;
+    flex: 1;
+    padding: 10px;
+    padding-bottom: 7rem;
+    margin-top: 3rem;
+}
+
+.settings > div.selection > div > h3 {
+    align-self: flex-start;
+    padding-left: 0.5rem;
+}
+
+.settings > div.selection > div {
+    border-bottom: 1px solid #00000020;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0.5rem 0.25rem;
+}
+
+.settings > div.selection > div:last-child {
+    border-bottom: none;
+}
+
+.settings > div.selection > div.sub-setting-nav {
+    border: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.settings > div button {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.settings > div button:hover,
+.settings > div button:focus {
+    background-color: var(--border-color);
+}
+
+.settings > div button:hover svg,
+.settings > div button:focus svg {
+    fill: white;
+}
+
+.settings > div button svg {
+    height: 20px;
+    width: 20px;
+}
+
+.settings > div.selection > div > label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.settings > div.selection > div > label.disabled {
+    background-color: #00000005;
+    color: #00000080;
+    border-radius: 0.5rem;
+    cursor: not-allowed;
+}
+
+.settings > div.selection > .account {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.settings > div.selection > .account > h3 {
+    text-transform: capitalize;
+}
+
+.settings > div > .account > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.settings > .background-img-wrapper {
+    width: 100%;
+    height: 100%;
+    max-height: 70vh;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    top: -11rem;
+    left: 0;
+    z-index: -1;
+}
+
+.settings > .background-img-wrapper > img.background-gradient {
+    width: 100%;
+    object-fit: cover;
+}
+
+.settings span.acc-data {
+    padding-left: 1rem;
+    font-weight: 600;
+}
+.settings .sub-setting-am > div.general > p {
+    font-size: large;
+    padding: 5px 1rem;
+}

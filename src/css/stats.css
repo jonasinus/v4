@@ -1,0 +1,54 @@
+.statistics {
+    display: flex;
+    width: 100%;
+    margin-top: 3rem;
+    padding: 0 1rem;
+    overflow-x: scroll;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 5rem;
+}
+
+.statistics > .locator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100%;
+}
+
+.statistics > div {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.statistics > div h3 {
+    font-size: 130%;
+}
+
+.statistics > .weekly-chart {
+    width: 100%;
+}
+
+.statistics div.average .data {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.statistics .average .data p {
+    padding: 0.75rem;
+    background-color: rgba(198, 198, 198, 0.21);
+    box-shadow: 0 0 15px 15px #00000005;
+    border-radius: 0.5rem;
+    width: fit-content;
+}
+
+.statistics .worst .data {
+    background-color: rgba(198, 198, 198, 0.21);
+    box-shadow: 0 0 15px 15px #00000005;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}

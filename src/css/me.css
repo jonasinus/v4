@@ -1,0 +1,90 @@
+.me {
+    overflow-y: scroll;
+    padding: 0 1rem;
+    padding-bottom: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.me > .section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.me > .section:first-child {
+    gap: 0rem;
+    padding-top: 2.5rem;
+}
+
+.me > .section.languages > ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.me > .section > ul {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    align-self: center;
+}
+
+.me > .section > ul > li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.me > .section > ul > li > div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.me > .section p.date {
+    color: #5157c5f0;
+    font-style: italic;
+    padding-left: 1.5rem;
+    font-size: small;
+}
+
+.me > .section > .badges {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    padding: 0 2rem;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory x;
+}
+
+.me > .section > .badges > .badge {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.me > .section > .badges > .badge img {
+    object-fit: contain;
+    width: 100vw;
+    align-self: center;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.me > .section.progress {
+    gap: 0rem;
+}
+
+.me > .section.progress > div {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}

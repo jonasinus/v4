@@ -1,0 +1,31 @@
+label.switch {
+    background-color: red;
+    display: flex;
+    width: 50px;
+    height: 25px;
+    position: relative;
+    border-radius: 25px;
+}
+
+label.switch.on {
+    background-color: green;
+}
+
+label.switch input[type='checkbox'] {
+    display: none;
+}
+
+label.switch > span {
+    height: 21px;
+    width: 21px;
+    background-color: rgb(204, 204, 204);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: 200ms ease-in-out;
+}
+
+label.switch.on > span {
+    left: calc(50px - 21px - 2px);
+}

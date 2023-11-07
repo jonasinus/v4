@@ -1,0 +1,225 @@
+.page.auth {
+    background-color: var(--color-bg);
+    color: #000;
+
+    --color-bg: #fff;
+    --color-bg-input: #f0f0f0;
+    --color-drk: #363636;
+    --color-mdm: #6c6c6c;
+
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    transition: top 250ms;
+}
+
+.page.auth.collapsed {
+    top: -100vh;
+    transition: top 750ms ease-out;
+}
+
+.page.auth > .background-img-wrapper {
+    width: 100%;
+    height: 100%;
+    max-height: max(40vh, calc(100vw / 3.125));
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+}
+
+.page.auth > .background-img-wrapper > img.background-gradient {
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.page.auth .error {
+    height: 0;
+    width: 0;
+}
+
+.page.auth .error.shown {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 1rem;
+    color: white;
+    width: calc(100vw - 2rem);
+    margin: 1rem;
+    opacity: 0;
+    animation: notificationRemover 5000ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes notificationRemover {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0.66;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.page.auth .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    max-height: max(40vh, calc(100vw / 3.125));
+}
+
+.page.auth .logo img {
+    border-radius: 1rem;
+    width: 90%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.page.auth .welcome-msg {
+    display: flex;
+    flex-direction: column;
+}
+
+.page.auth .welcome-msg h1 {
+    color: var(--color-drk);
+    font-size: 78px;
+    line-height: 75px;
+    font-weight: 700;
+    font-family: 'Poppins Bold', sans-serif;
+}
+
+.page.auth.reset .welcome-msg h1,
+.page.auth.setnew .welcome-msg h1 {
+    font-size: 55px;
+    line-height: 52px;
+}
+
+.page.auth .welcome-msg p {
+    color: var(--color-mdm);
+    font-family: 'Poppins Bold', sans-serif;
+    font-weight: 700;
+    font-size: 120%;
+    padding-left: 5px;
+}
+
+.page.auth form.form.login {
+    position: absolute;
+    bottom: 0;
+    height: 60vh;
+    padding: 0 1rem 0 2rem;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+
+    gap: 1rem;
+}
+
+.page.auth .input {
+    background-color: var(--color-bg-input);
+    box-shadow: 0 0 5px 5px #00000015;
+    width: calc(min(500px, 100vw) - 60px);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0x;
+    padding: 5px 10px;
+    height: 80%;
+}
+
+.page.auth .input:has(input:focus) {
+    border: 1px solid blue;
+}
+
+.page.auth .input svg {
+    fill: rgb(84, 84, 84);
+}
+
+.page.auth .input input {
+    width: 95%;
+    height: 85%;
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-mdm);
+    font-size: large;
+}
+
+.page.auth .input label {
+    width: 0;
+    margin-left: 20px;
+    pointer-events: none;
+}
+
+.page.auth .input label.h {
+    opacity: 0;
+}
+
+.page.auth .input.password-input {
+    position: relative;
+}
+
+.page.auth .input.password-input .forgot {
+    position: absolute;
+    top: 100%;
+    right: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: var(--color-mdm);
+    cursor: pointer;
+}
+
+.page.auth .input.password-input .forgot:hover,
+.page.auth .input.password-input .forgot:focus {
+    color: var(--color-drk);
+}
+
+.page.auth .einloggen {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.page.auth .einloggen {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 2rem;
+}
+
+.page.auth .einloggen input {
+    padding: 1rem;
+    background: linear-gradient(90deg, rgba(253, 188, 120, 1) -10%, rgba(254, 112, 185, 1) 110%);
+    border-radius: 10px;
+    border-color: transparent;
+    box-shadow: 0 0 5px 5px #00000015;
+    cursor: pointer;
+}
+
+input.bad {
+    border: 1px solid red;
+}
+
+input.alright {
+    border: 1px solid green;
+}
+
+input.empty {
+    border: none;
+}

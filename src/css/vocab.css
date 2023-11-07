@@ -1,0 +1,146 @@
+.vocab {
+    padding: 0 1rem;
+    width: 100%;
+    margin-top: 3rem;
+    max-height: calc(100% - 10rem);
+    display: grid;
+    grid-template-rows: 2rem 3em 4rem auto 2rem;
+    gap: 1rem;
+}
+
+.vocab > .locator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: left;
+}
+
+.vocab > .options {
+    border: 1px solid gray;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    overflow: scroll;
+    margin-bottom: 1rem;
+}
+
+.vocab > .options > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vocab > .options > div > button {
+    padding: 5px;
+    width: 40px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vocab > .options > div > button > svg {
+    width: fit-content;
+}
+
+.vocab > .options .popup {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 15px 15px #00000020;
+    display: flex;
+    top: calc(3rem + 2rem + 3rem + 3rem + 3rem + 5px);
+    left: 2.5rem;
+    right: 2.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: min(calc(100% - 5rem), auto);
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.vocab > .options .popup .btns {
+    display: grid;
+    grid-template-columns: 8rem 8rem;
+    gap: 0.5rem;
+}
+
+.vocab > .options .popup .btns > button {
+    padding: 5px;
+}
+
+.vocab > .options .popup .btns > button.active {
+    border: 2px solid var(--border-color);
+}
+
+.vocab > .options .popup.search {
+    justify-self: right;
+}
+
+.vocab > .options .popup.search > input {
+    padding: 0.5rem;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    color: black;
+}
+
+.vocab > .options .popup > button {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 75%;
+}
+
+.vocab > ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1rem;
+}
+
+.vocab > ul > li {
+    border: 1px solid gray;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    gap: 10px;
+}
+
+.vocab > ul > li > p.native {
+    display: flex;
+    gap: 10px;
+}
+
+.vocab > .locator > button {
+    padding: 5px 10px;
+    border: 1px solid rgb(192, 192, 192);
+}
+
+.vocab > .ctrls {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 6rem;
+}
+
+.vocab > .ctrls > button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vocab > .ctrls > p {
+    align-self: center;
+    height: 100%;
+}
